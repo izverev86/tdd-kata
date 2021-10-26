@@ -1,5 +1,7 @@
 const Add = (text) => {
-  if( text === '1') return 1
+  const value = parseInt(text, 10);
+
+  if (!isNaN(value)) return value;
 
   return 0;
 };
