@@ -1,9 +1,8 @@
 const Add = (text) => {
-  const value = parseInt(text, 10);
-
-  if (!isNaN(value)) return value;
-
-  return 0;
+  const splitted = text.split(',')
+  return splitted
+    .filter(x => !isNaN(parseInt(x, 10)))
+    .reduce((prev, cur) => parseInt(prev, 10) + parseInt(cur, 10), 0)
 };
 
 module.exports = Add;

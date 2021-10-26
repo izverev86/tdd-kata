@@ -11,3 +11,7 @@ test('when value is 1 return 1', () => {
 test('when value is 2 return 2', () => {
     expect(Add('2')).toBe(2)
 })
+
+test('should sum two number splitted by comma', () => {
+    expect(Add('2,2')).toBe(4)
+})
