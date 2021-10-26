@@ -1,0 +1,11 @@
+{
+  "name": "tdd-kata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/izverev86/tdd-kata.git",
+  "author": "ivan <izverev86@dodopizza.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
