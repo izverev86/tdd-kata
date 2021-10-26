@@ -19,3 +19,7 @@ test('should sum two number splitted by comma', () => {
 test('should sum two numbers with new line delimeter', () => {
     expect(Add('1\n2')).toBe(3)
 })
+
+test('should sum two numbers with custom delimetrs', () => {
+    expect(Add('//;\n1;2')).toBe(3)
+})

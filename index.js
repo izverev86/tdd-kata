@@ -1,7 +1,13 @@
-const delimeters = [",", "\n"];
+const delimeters = [",", "\\n"];
 
 const Add = (text) => {
-  const splitted = text.split(/([^(,|\n)]+)/g)
+      
+  const indexOfSlashes = text.indexOf('//')
+  if(indexOfSlashes != -1){
+    delimeters.push(text[indexOfSlashes+2])
+  }
+  const regexp = `([^(${delimeters.join('|')})]+)`
+  const splitted = text.split(new RegExp(regexp))
 
   return splitted
     .filter(x => !isNaN(parseInt(x, 10)))
