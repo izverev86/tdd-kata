@@ -23,3 +23,7 @@ test('should sum two numbers with new line delimeter', () => {
 test('should sum two numbers with custom delimetrs', () => {
     expect(Add('//;\n1;2')).toBe(3)
 })
+
+test('should throw errors for negative values', () => {
+    expect(() => Add('-1')).toThrow('Negative numbers not allowed')
+})
