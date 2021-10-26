@@ -15,3 +15,7 @@ test('when value is 2 return 2', () => {
 test('should sum two number splitted by comma', () => {
     expect(Add('2,2')).toBe(4)
 })
+
+test('should sum two numbers with new line delimeter', () => {
+    expect(Add('1\n2')).toBe(3)
+})
